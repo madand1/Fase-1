@@ -10,7 +10,7 @@ load_dotenv(dotenv_path="dotenv.env")
 # Guardamos la url base
 url_base="https://api.themoviedb.org/3/"
 
-# En una variable key, guardamos por el diccionario os.environ nuestra key
+# Variable KEY
 key=os.environ["api_key"]
 
 # Código del país, en esta caso Inglaterra
@@ -22,11 +22,11 @@ payload = {'api_key':key,"languaje":code}
 # Peticion de titulo 
 serie = input("Introduce el nombre de la serie o tv show que desea buscar: ")
 
-# Construimos la url con los parámetros
+
 url = url_base+'search/tv'+'?query='+serie
 r=requests.get(url,params=payload)
 
-# Guardo la variable de la respuesta
+
 if r.status_code == 200:
     doc=r.json()
     
