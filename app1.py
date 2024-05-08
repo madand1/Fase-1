@@ -10,10 +10,10 @@ load_dotenv(dotenv_path="dotenv.env")
 # Guardamos la URL base
 url_base = "https://api.themoviedb.org/3/"
 
-# Obtenemos la clave de la API desde las variables de entorno
+# Obtener la clave API de mi entorno
 api_key = os.getenv("API_KEY")
 
-# Si la clave de la API no está configurada, mostramos un mensaje de error
+# Error si no esta la clave API
 if api_key is None:
     print("Error: No se encontró la clave de la API en el archivo dotenv.env.")
     exit()
